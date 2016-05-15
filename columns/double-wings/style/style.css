@@ -1,0 +1,90 @@
+/**
+     * 双飞翼布局实践 css
+     * author:simon@moreker.com;
+     * update:2016-05-14 21:25;
+    */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.layout-header {
+    min-height: 100px;
+    line-height: 100px;
+    background: #ccc;
+    text-align: center;
+}
+
+.layout-main {
+    width: 100%;
+    overflow: hidden;
+    /** 保证滚动条不超出主内容 */
+    zoom: 1;
+}
+
+
+/**
+    *主列框架
+    */
+
+.layout-main .col-main {
+    float: left;
+    width: 100%;
+    background: #ccc;
+}
+
+
+/**
+    *主列内容区
+    */
+
+.layout-main .main-wrap {
+    margin: 0 160px 0 210px;
+    background: #999;
+    min-height: 60px;
+    height: 100%;
+    min-height: 300px;
+}
+
+
+/**
+    *子列
+    */
+
+.layout-main .col-sub {
+    float: left;
+    background: #f30;
+    width: 200px;
+    margin-left: -100%;
+    min-height: 50px;
+}
+
+
+/**
+    *扩展列
+    */
+
+.layout-main .col-extra {
+    float: left;
+    width: 150px;
+    min-height: 50px;
+    margin-left: -150px;
+    background: #36f;
+}
+
+
+/**
+     * 高度自适应
+    */
+
+.col-main,
+.col-sub,
+.col-extra {
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
+
+.layout-footer {
+    text-align: center;
+}
